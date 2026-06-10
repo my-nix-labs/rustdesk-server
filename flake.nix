@@ -20,6 +20,7 @@
           cp -r ${self}/. $out/
           chmod -R u+w $out
           rm -rf $out/.git $out/libs/hbb_common
+          mkdir -p $out/libs
           cp -r ${hbb_common} $out/libs/hbb_common
         '';
         packages = import ./nix/default.nix {
