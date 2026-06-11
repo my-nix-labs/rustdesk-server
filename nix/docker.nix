@@ -14,7 +14,7 @@ pkgs.dockerTools.buildLayeredImage {
   ];
 
   config = {
-    # CA bundle for Rust HTTPS; site config (RELAY, KEY_*, ENCRYPTED_ONLY) comes from compose/.env
+    # CA bundle for Rust HTTPS; 可选环境变量：KEY_*、ENCRYPTED_ONLY
     Env = [
       "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt"
     ];
